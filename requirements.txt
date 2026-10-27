@@ -1,0 +1,6 @@
+flask
+requests
+google.generativeai
+functools
+bcrypt
+mysql.connector

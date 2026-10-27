@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Vartalap.ai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+
+</head>
+
+<body>
+
+    <div class="panel form-panel form-panel--right" aria-labelledby="loginTitle">
+        <div class="form-inner">
+            <h2 id="loginTitle" class="panel-title">Log In</h2>
+            <form method="POST" action="/login" class="form" aria-label="Login form" novalidate>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="loginEmail">Username or Email</label>
+                        <input id="loginEmail" name="email" type="text" placeholder="niveshbansal@example.com"
+                            autocomplete="username" required />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="loginPassword">Password</label>
+                        <input id="loginPassword" name="password" type="password" placeholder="••••••••"
+                            autocomplete="current-password" required />
+                    </div>
+                </div>
+            
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">LOG IN</button>
+                </div>
+                <div class="form-secondary">
+                    <a href="{{ url_for('signup') }}" class="link">Sign Up</a>
+                    <span>to get started</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
